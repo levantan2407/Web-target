@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TARGET B1/B2 - Nền Tảng Luyện Thi TARGET Trực Tuyến Hàng Đầu</title>
+  <meta name="description" content="Nền tảng thi thử và luyện thi TARGET B1/B2 chuẩn Bộ Giáo Dục & Đào Tạo với công nghệ AI chấm chữa chi tiết, kho đề phong phú và lộ trình cá nhân hóa.">
+  <link rel="icon" type="image/svg+xml" href="logo khong nen.png">
+
+  <!-- Google Fonts: Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Be Vietnam Pro"', 'sans-serif'],
+          },
+          colors: {
+            primary: '#830B18',
+            primaryDark: '#6B0A14',
+            primaryLight: '#A7192E',
+            accent: '#E85D2A',
+            background: '#FAF7F2',
+            textMain: '#292929',
+            textMuted: '#666666',
+            gold: '#D9A441',
+            cream: '#FAF7F2',
+          },
+          boxShadow: {
+            'soft': '0 10px 40px -10px rgba(131, 11, 24, 0.08)',
+            'card': '0 20px 40px -15px rgba(0,0,0,0.05)',
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Handwriting Fonts for Teacher Speech Bubble -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Itim&family=Pangolin&family=Patrick+Hand&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FontAwesome 6 Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Add subtle hover animations */
+    .glass-card {
+      transition: all 0.25s ease;
+    }
+    .glass-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+    }
+
+    
+    /* Decorative elements */
+    .hero-decor-line {
+      position: absolute;
+      stroke-dasharray: 200;
+      stroke-dashoffset: 200;
+      animation: drawLine 2s ease forwards;
+    }
+    
+    @keyframes drawLine {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-background text-textMain font-sans antialiased overflow-x-hidden">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 transition-all duration-300 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16 lg:h-20">
+        
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group" onclick="switchTab('home', event)">
+          <img src="logo khong nen.png" alt="TARGET VSTEP English" class="w-12 h-12 md:w-14 md:h-14 object-contain group-hover:scale-105 transition-transform">
+          <div>
+            <div class="text-xl md:text-2xl font-black tracking-tight text-primary">
+              TARGET B1/B2
+            </div>
+            <div class="text-[10px] md:text-xs tracking-widest uppercase font-semibold text-textMuted">
+              Bứt Phá Điểm Số
+            </div>
+          </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-1.5 p-1.5 bg-[#FAF0ED]/80 rounded-full border border-[#E8C9C9]/60 backdrop-blur-md">
+          <button data-tab="home" onclick="switchTab('home')" class="nav-tab-btn active">
+            Trang chủ
+          </button>
+          <a href="roadmap.html" class="nav-tab-btn">
+            Lộ trình học
+          </a>
+          <button data-tab="courses" onclick="switchTab('courses')" class="nav-tab-btn">
+            Gói luyện thi
+          </button>
+          <button data-tab="teacher" onclick="switchTab('teacher')" class="nav-tab-btn">
+            Thông tin giáo viên
+          </button>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScgv7Ev9htYDpq-kmRl8uWUtb7fxqvHjt2sk98ZieqGhL77SQ/viewform" target="_blank" rel="noopener noreferrer" class="nav-tab-btn">
+            Đăng ký khóa học
+          </a>
+        </nav>
+
+        <!-- Desktop Actions -->
+        <div class="hidden lg:flex items-center gap-3">
+          <a href="https://www.facebook.com/share/17sPFhJyEM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 text-sm font-bold text-white bg-gradient-to-r from-primary to-accent rounded-full shadow-md shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0 transition-all flex items-center gap-2">
+            <i data-lucide="headset" class="w-4 h-4 text-gold"></i>
+            Tư vấn miễn phí
+          </a>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex lg:hidden items-center gap-2">
+          <button id="mobile-menu-toggle" onclick="toggleMobileMenu()" class="p-2 text-primary hover:bg-gray-100 rounded-lg focus:outline-none" aria-label="Toggle Navigation">
+            <i data-lucide="menu" id="menu-icon-open" class="w-6 h-6"></i>
+            <i data-lucide="x" id="menu-icon-close" class="w-6 h-6 hidden"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="mobile-menu lg:hidden border-b border-gray-100 bg-white shadow-xl absolute w-full left-0">
+      <div class="px-4 pt-2 pb-6 space-y-2">
+        <button data-tab="home" onclick="switchTab('home'); closeMobileMenu()" class="w-full text-left px-4 py-3 text-base font-bold rounded-xl text-textMain hover:bg-gray-50 flex items-center justify-between">
+          Trang chủ
+          <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+        </button>
+        <a href="roadmap.html" class="w-full text-left px-4 py-3 text-base font-semibold rounded-xl text-textMain hover:bg-gray-50 flex items-center justify-between">
+          Lộ trình học
+          <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+        </a>
+        <button onclick="switchTab('courses'); closeMobileMenu()" class="w-full text-left px-4 py-3 text-base font-semibold rounded-xl text-textMain hover:bg-gray-50 flex items-center justify-between">
+          Gói luyện thi
+          <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+        </button>
+        <button data-tab="teacher" onclick="switchTab('teacher'); closeMobileMenu()" class="w-full text-left px-4 py-3 text-base font-semibold rounded-xl text-textMain hover:bg-gray-50 flex items-center justify-between">
+          Thông tin giáo viên
+          <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+        </button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScgv7Ev9htYDpq-kmRl8uWUtb7fxqvHjt2sk98ZieqGhL77SQ/viewform" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="w-full text-left px-4 py-3 text-base font-semibold rounded-xl text-textMain hover:bg-gray-50 flex items-center justify-between">
+          Đăng ký khóa học
+          <i data-lucide="arrow-right" class="w-4 h-4 text-gray-400"></i>
+        </a>
+
+        <div class="pt-4 mt-4 border-t border-gray-100 space-y-2">
+          <a href="https://www.facebook.com/share/17sPFhJyEM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" onclick="closeMobileMenu()" class="w-full py-3 text-center font-bold text-white bg-gradient-to-r from-primary to-accent rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+            <i data-lucide="headset" class="w-4 h-4 text-gold"></i>
+            Tư vấn miễn phí ngay
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="hero-section" class="tab-content relative flex items-center justify-center py-6 sm:py-8 lg:py-10 overflow-hidden bg-background">
+    <!-- Background Decoration -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
+      <!-- Muted large shapes -->
+      <div class="absolute -top-20 -right-20 w-[600px] h-[600px] bg-[#EED7D7] rounded-full mix-blend-multiply filter blur-3xl opacity-40"></div>
+      <div class="absolute top-1/3 -left-32 w-[500px] h-[500px] bg-[#F7E8E5] rounded-full mix-blend-multiply filter blur-3xl opacity-60"></div>
+      
+      <!-- Small decorative elements -->
+      <!-- Airplane path left -->
+      <svg class="absolute top-32 left-[10%] text-primary opacity-60 w-32 h-32" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="hero-decor-line" d="M150 50 C120 70, 80 80, 40 120" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/>
+        <path d="M40 120 L50 110 L45 130 Z" fill="currentColor" />
+      </svg>
+      <!-- Airplane path right -->
+      <svg class="absolute top-1/2 right-[5%] text-primary opacity-60 w-40 h-40 transform -rotate-12" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="hero-decor-line" d="M30 150 C80 120, 120 100, 170 50" stroke="currentColor" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/>
+        <path d="M170 50 L160 60 L165 40 Z" fill="currentColor" />
+      </svg>
+      
+      <!-- Highlight brush behind title -->
+      <svg class="absolute top-48 left-[45%] text-primary/10 w-64 h-32 transform -translate-x-1/2" viewBox="0 0 200 50" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 25 Q 50 10 100 25 T 190 25 Q 150 40 100 25 T 10 25" />
+      </svg>
+
+      <!-- Dots element -->
+      <div class="absolute bottom-20 left-20 grid grid-cols-4 gap-2 opacity-20">
+        <div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+        <div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div><div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+      </div>
+      
+      <!-- Subtle dots pattern -->
+      <div class="absolute inset-0 opacity-[0.02]" style="background-image: radial-gradient(#830B18 2px, transparent 2px); background-size: 30px 30px;"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
+        
+        <!-- Hero Text & CTAs (Left Column) -->
+        <div class="lg:col-span-7 space-y-4 text-center lg:text-left reveal">
+          
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F7E8E5] border border-[#E8C9C9]">
+            <span class="w-2 h-2 rounded-full bg-primary"></span>
+            <span class="text-xs font-bold uppercase tracking-wider text-primary">Chuẩn Khung 6 Bậc VSTEP</span>
+          </div>
+
+          <!-- Main Heading -->
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight text-primary relative">
+            <span class="block mb-1">LUYỆN THI VSTEP -</span>
+            <span class="inline-block py-1 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              TARGET B1/B2
+            </span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="text-base sm:text-lg text-textMuted max-w-2xl mx-auto lg:mx-0 font-medium leading-relaxed">
+            Lộ trình học tập tinh gọn, dễ hiểu, được tổng hợp dựa trên cấu trúc đề thi VSTEP. Giúp bạn củng cố lại kiến thức nền tảng, và từng bước cải thiện kỹ năng để hướng tới <span class="font-bold text-textMain">TARGET B1/B2</span>.
+          </p>
+
+          <!-- Checkmark Highlights List (2 Columns) -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-3 pt-1 max-w-2xl mx-auto lg:mx-0 text-left">
+            
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#F7E8E5] text-primary flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span class="text-textMain font-medium leading-snug text-sm">Bạn đang cần bằng B1, B2 để kịp xét tốt nghiệp hay hoàn thiện hồ sơ đầu ra.</span>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#F7E8E5] text-primary flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span class="text-textMain font-medium leading-snug text-sm">Khóa học này giúp bạn lấy lại gốc, nắm chắc chiến thuật làm bài và tự tin nhận bằng đúng hạn.</span>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#F7E8E5] text-primary flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span class="text-textMain font-medium leading-snug text-sm">Chỉ với lộ trình 3 tháng tinh gọn và đúng trọng tâm.</span>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <div class="w-5 h-5 rounded-full bg-[#F7E8E5] text-primary flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="check" class="w-3.5 h-3.5 stroke-[3]"></i>
+              </div>
+              <span class="text-textMain font-medium leading-snug text-sm">Được hỗ trợ giải đáp thắc mắc và tương tác suốt khóa học.</span>
+            </div>
+
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-3">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScgv7Ev9htYDpq-kmRl8uWUtb7fxqvHjt2sk98ZieqGhL77SQ/viewform" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-6 py-3 text-sm font-bold text-white bg-primary hover:bg-primaryDark rounded-xl shadow-soft transition-all duration-200 flex items-center justify-center gap-2 group">
+              <span>Đăng Ký Khóa Học</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Hero Card Preview (Right Column) -->
+        <div class="lg:col-span-5 relative reveal w-full">
+          <div class="relative mx-auto w-full max-w-sm lg:max-w-[360px] xl:max-w-sm">
+            
+            <!-- White Card Frame -->
+            <div class="bg-white rounded-[20px] p-4 sm:p-5 border border-[#E8C9C9]/50 shadow-card relative overflow-hidden">
+              <div class="flex items-center justify-between border-b border-gray-100 pb-3 mb-3">
+                <div class="flex items-center gap-1.5">
+                  <div class="w-3 h-3 rounded-full bg-primary"></div>
+                  <div class="w-3 h-3 rounded-full bg-gold"></div>
+                  <div class="w-3 h-3 rounded-full bg-[#10B981]"></div>
+                </div>
+                <div class="text-[11px] font-semibold text-textMuted flex items-center gap-1.5 bg-gray-50 px-2.5 py-1 rounded-full border border-gray-100">
+                  <span class="w-1.5 h-1.5 rounded-full bg-[#10B981]"></span>
+                 4 Kỹ Năng
+                </div>
+              </div>
+
+              <!-- Module Status List -->
+              <div class="space-y-2.5">
+                
+                <!-- Listening -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-[#E8C9C9] flex items-center justify-between hover:border-primary/30 transition-colors duration-200 group">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#F7E8E5] text-primary rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-200 shrink-0">
+                      <i data-lucide="volume-2" class="w-4.5 h-4.5"></i>
+                    </div>
+                    <div>
+                      <div class="font-bold text-textMain text-[13.5px] leading-tight mb-0.5">Kỹ Năng Nghe (Listening)</div>
+                      <div class="text-[11.5px] text-textMuted">3 Phần - 35 Câu hỏi - 40 Phút</div>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-0.5 text-[11px] font-bold text-[#059669] bg-[#D1FAE5] rounded-full shrink-0">Sẵn sàng</span>
+                </div>
+
+                <!-- Reading -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-[#E8C9C9] flex items-center justify-between hover:border-primary/30 transition-colors duration-200 group">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#F7E8E5] text-primary rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-200 shrink-0">
+                      <i data-lucide="book-open" class="w-4.5 h-4.5"></i>
+                    </div>
+                    <div>
+                      <div class="font-bold text-textMain text-[13.5px] leading-tight mb-0.5">Kỹ Năng Đọc (Reading)</div>
+                      <div class="text-[11.5px] text-textMuted">4 Bài đọc - 40 Câu hỏi - 60 Phút</div>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-0.5 text-[11px] font-bold text-[#059669] bg-[#D1FAE5] rounded-full shrink-0">Sẵn sàng</span>
+                </div>
+
+                <!-- Writing -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-[#E8C9C9] flex items-center justify-between hover:border-primary/30 transition-colors duration-200 group">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#F7E8E5] text-primary rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-200 shrink-0">
+                      <i data-lucide="edit-3" class="w-4.5 h-4.5"></i>
+                    </div>
+                    <div>
+                      <div class="font-bold text-textMain text-[13.5px] leading-tight mb-0.5">Kỹ Năng Viết (Writing)</div>
+                      <div class="text-[11.5px] text-textMuted">Task 1 Thư & Task 2 Luận - 60 Phút</div>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-0.5 text-[11px] font-bold text-[#D97706] bg-[#FEF3C7] rounded-full shrink-0">Chấm AI</span>
+                </div>
+
+                <!-- Speaking -->
+                <div class="p-2.5 sm:p-3 rounded-xl bg-white border border-[#E8C9C9] flex items-center justify-between hover:border-primary/30 transition-colors duration-200 group">
+                  <div class="flex items-center gap-3">
+                    <div class="w-9 h-9 flex items-center justify-center bg-[#F7E8E5] text-primary rounded-lg group-hover:bg-primary group-hover:text-white transition-colors duration-200 shrink-0">
+                      <i data-lucide="mic" class="w-4.5 h-4.5"></i>
+                    </div>
+                    <div>
+                      <div class="font-bold text-textMain text-[13.5px] leading-tight mb-0.5">Kỹ Năng Nói (Speaking)</div>
+                      <div class="text-[11.5px] text-textMuted">3 Phần tương tác ghi âm - 12 Phút</div>
+                    </div>
+                  </div>
+                  <span class="px-2.5 py-0.5 text-[11px] font-bold text-[#D97706] bg-[#FEF3C7] rounded-full shrink-0">Ghi âm AI</span>
+                </div>
+
+              </div>
+
+              <!-- CTA Inside Card -->
+              <div class="mt-4 pt-3">
+                <button onclick="switchTab('structure')" class="w-full py-2.5 px-4 bg-primary hover:bg-primaryDark text-white font-bold text-xs sm:text-sm rounded-xl shadow-sm transition-all duration-200 text-center flex items-center justify-center gap-2">
+                  <span>Tổng Quan Cấu Trúc Đề Thi</span>
+                </button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    
+  </section>
+
+  <!-- SVG Bottom Wave for transition to dark section -->
+  <div class="w-full overflow-hidden leading-none bg-background -mb-1 relative z-10 flex flex-col items-center">
+    <!-- SVG that transitions from background to primary color wave -->
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] sm:h-[120px] block transform -scale-x-100" style="fill: #830B18;">
+        <path d="M0,0 C240,120 480,120 720,60 C960,0 1200,0 1440,60 L1440,120 L0,120 Z"></path>
+    </svg>
+  </div>
+
+  
+
+
+  <!-- ==================== 8 PRIVILEGES SECTION ==================== -->
+  <section id="privileges-section" class="py-24 bg-background relative overflow-hidden">
+    <!-- Background Radial Glows -->
+    <div class="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#F7E8E5]/40 rounded-full blur-[140px] pointer-events-none"></div>
+    <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-[#F7E8E5]/40 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F7E8E5] border border-[#E8C9C9] text-primary text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+          <i data-lucide="crown" class="w-4 h-4 text-primary"></i>
+          <span>Đặc Quyền Học Viên TARGET</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight leading-normal py-1">
+           Đặc Quyền Đồng Hành Cùng Bạn <br class="hidden sm:inline" />
+          <span class="text-primary inline-block py-1">Chinh Phục TARGET B1/B2</span>
+        </h2>
+        <p class="text-textMain font-medium text-base sm:text-lg leading-relaxed">
+          Hệ thống đào tạo toàn diện, cá nhân hóa giúp bạn lấy lại gốc, tự tin làm bài thi và đạt bằng đúng hạn.
+        </p>
+      </div>
+
+      <!-- 8 Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Privilege 1 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">01</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="video" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Học Online qua Google Meet</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Học trực tuyến linh hoạt thời gian và địa điểm.
+          </p>
+        </div>
+
+        <!-- Privilege 2 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">02</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="package" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Sách gửi tận nhà</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Giáo trình, tài liệu được gửi tận tay ngay khi đăng ký khóa học.
+          </p>
+        </div>
+
+        <!-- Privilege 3 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">03</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="file-check-2" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Sửa bài 1:1</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Được chữa bài viết/nói cá nhân, chỉ rõ lỗi sai và hướng cải thiện.
+          </p>
+        </div>
+
+        <!-- Privilege 4 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">04</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="clipboard-list" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Bài tập mỗi buổi</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Củng cố kiến thức đã học bằng bài tập thường xuyên.
+          </p>
+        </div>
+
+        <!-- Privilege 5 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">05</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="monitor" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Xem lại record bài học
+</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Kho video record các buổi học trực tuyến, giúp bạn dễ dàng xem lại và không bỏ lỡ kiến thức.
+          </p>
+        </div>
+
+        <!-- Privilege 6 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">06</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="users" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Lớp học sĩ số nhỏ</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Chỉ 5–10 bạn/lớp, tăng tương tác và được hỗ trợ sát sao.
+          </p>
+        </div>
+
+        <!-- Privilege 7 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">07</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Đồng hành đến khi thi</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Theo sát tiến độ, hỗ trợ và giải đáp thắc mắc suốt khóa học.
+          </p>
+        </div>
+
+        <!-- Privilege 8 -->
+        <div class="glass-card p-6 sm:p-7 rounded-3xl border border-gray-200 bg-white hover:border-[#E8C9C9] transition-all duration-300 group hover:-translate-y-1.5 shadow-md hover:shadow-xl relative reveal">
+          <div class="absolute top-4 right-4 text-xs font-mono font-extrabold text-gray-400 group-hover:text-primary transition-colors">08</div>
+          <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center mb-6 shadow-lg shadow-soft group-hover:scale-110 transition-transform">
+            <i data-lucide="award" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-primary mb-2.5 group-hover:text-primary transition-colors">Cam kết đầu ra</h3>
+          <p class="text-sm text-textMain font-medium leading-relaxed">
+            Đồng hành cùng học viên cho đến khi đạt mục tiêu.
+          </p>
+        </div>
+
+      </div>
+
+  <!-- ==================== LỘ TRÌNH 4 GIAI ĐOẠN (TRANG CHỦ) ==================== -->
+  <section id="roadmap-home-section" class="py-24 bg-background relative overflow-hidden">
+    <!-- Background Glows -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#F7E8E5]/40 rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F7E8E5] border border-[#E8C9C9] text-primary text-xs font-bold uppercase tracking-wider backdrop-blur-md">
+          <i data-lucide="compass" class="w-4 h-4 text-primary"></i>
+          <span>Lộ Trình Học Bài Bản</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight leading-normal py-1">
+          Lộ Trình Luyện Thi VSTEP B1/B2 <br class="hidden sm:inline" />
+          <span class="inline-block mt-0.5 sm:mt-1 text-primary py-1">Trong 2,5 – 3 Tháng</span>
+        </h2>
+      </div>
+
+      <!-- Info Badges -->
+      <div class="flex flex-wrap items-center justify-center gap-4 mb-12 reveal">
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-sm font-semibold text-textMain font-medium">
+          <i data-lucide="calendar" class="w-4 h-4 text-primary"></i>
+          2 buổi/tuần
+        </span>
+        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-gray-200 text-sm font-semibold text-textMain font-medium">
+          <i data-lucide="clock" class="w-4 h-4 text-primary"></i>
+          1,5 giờ/buổi
+        </span>
+      </div>
+
+      <!-- 4 Stages Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+
+        <!-- Stage 1: NỀN TẢNG -->
+        <div class="glass-card p-6 rounded-3xl border border-[#E8C9C9] bg-white flex flex-col justify-between hover:border-[#E8C9C9] hover:shadow-xl hover:shadow-soft transition-all duration-300 group reveal">
+          <div>
+            <div class="text-center mb-5">
+              <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 font-black text-lg shadow-lg shadow-soft">1</div>
+              <div class="inline-block px-3 py-1 rounded-full bg-primary text-white font-extrabold text-[10px] uppercase tracking-wider">GIAI ĐOẠN 1</div>
+              <h4 class="text-lg font-black text-primary mt-2">NỀN TẢNG</h4>
+            </div>
+
+            <div class="w-14 h-14 rounded-2xl bg-[#F7E8E5] text-primary flex items-center justify-center mx-auto mb-5 border border-[#E8C9C9] group-hover:scale-110 transition-transform">
+              <i data-lucide="book-open" class="w-7 h-7"></i>
+            </div>
+
+            <ul class="space-y-2.5 text-sm text-textMain font-medium mb-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Ngữ pháp trọng tâm</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Cấu trúc đề VSTEP</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-[#F7E8E5] border border-[#E8C9C9] text-center">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-primary flex items-center justify-center gap-1">
+              <i data-lucide="target" class="w-3.5 h-3.5"></i> MỤC TIÊU
+            </div>
+            <div class="text-sm font-semibold text-primary mt-1">Nắm chắc nền B1/B2</div>
+          </div>
+        </div>
+
+        <!-- Stage 2: KỸ NĂNG & CHIẾN THUẬT -->
+        <div class="glass-card p-6 rounded-3xl border border-[#E8C9C9] bg-white flex flex-col justify-between hover:border-[#E8C9C9] hover:shadow-xl hover:shadow-soft transition-all duration-300 group reveal">
+          <div>
+            <div class="text-center mb-5">
+              <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 font-black text-lg shadow-lg shadow-soft">2</div>
+              <div class="inline-block px-3 py-1 rounded-full bg-primary text-white font-extrabold text-[10px] uppercase tracking-wider">GIAI ĐOẠN 2</div>
+              <h4 class="text-lg font-black text-primary mt-2">KỸ NĂNG & CHIẾN THUẬT</h4>
+            </div>
+
+            <ul class="space-y-3 text-sm text-textMain font-medium mb-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="book" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span><strong class="text-primary">Reading:</strong> Tips làm từng dạng bài & Từ vựng</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="headphones" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span><strong class="text-primary">Listening:</strong> Nghe ý chính & Chi tiết quan trọng</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="edit-3" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span><strong class="text-primary">Writing:</strong> Template & Tư duy</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="message-square" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span><strong class="text-primary">Speaking:</strong> Đúng trọng tâm & rõ ràng</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-[#F7E8E5] border border-[#E8C9C9] text-center">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-primary flex items-center justify-center gap-1">
+              <i data-lucide="target" class="w-3.5 h-3.5"></i> MỤC TIÊU
+            </div>
+            <div class="text-sm font-semibold text-primary mt-1">Nắm chắc các bước làm bài</div>
+          </div>
+        </div>
+
+        <!-- Stage 3: LUYỆN ĐỀ CHUYÊN SÂU -->
+        <div class="glass-card p-6 rounded-3xl border border-[#E8C9C9] bg-white flex flex-col justify-between hover:border-[#E8C9C9] hover:shadow-xl hover:shadow-soft transition-all duration-300 group reveal">
+          <div>
+            <div class="text-center mb-5">
+              <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 font-black text-lg shadow-lg shadow-soft">3</div>
+              <div class="inline-block px-3 py-1 rounded-full bg-primary text-white font-extrabold text-[10px] uppercase tracking-wider">GIAI ĐOẠN 3</div>
+              <h4 class="text-lg font-black text-primary mt-2">LUYỆN ĐỀ CHUYÊN SÂU</h4>
+            </div>
+
+            <div class="w-14 h-14 rounded-2xl bg-[#F7E8E5] text-primary flex items-center justify-center mx-auto mb-5 border border-[#E8C9C9] group-hover:scale-110 transition-transform">
+              <i data-lucide="clipboard-check" class="w-7 h-7"></i>
+            </div>
+
+            <ul class="space-y-2.5 text-sm text-textMain font-medium mb-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Luyện đề Reading, Listening</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Chữa Writing & Speaking</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Sửa lỗi cá nhân</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-[#F7E8E5] border border-[#E8C9C9] text-center">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-primary flex items-center justify-center gap-1">
+              <i data-lucide="target" class="w-3.5 h-3.5"></i> MỤC TIÊU
+            </div>
+            <div class="text-sm font-semibold text-primary mt-1">Tăng độ chính xác & nâng cao kỹ năng</div>
+          </div>
+        </div>
+
+        <!-- Stage 4: THI THỬ & CHỮA ĐỀ -->
+        <div class="glass-card p-6 rounded-3xl border border-[#E8C9C9] bg-white flex flex-col justify-between hover:border-[#E8C9C9] hover:shadow-xl hover:shadow-soft transition-all duration-300 group reveal">
+          <div>
+            <div class="text-center mb-5">
+              <div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center mx-auto mb-3 font-black text-lg shadow-lg shadow-soft">4</div>
+              <div class="inline-block px-3 py-1 rounded-full bg-primary text-white font-extrabold text-[10px] uppercase tracking-wider">GIAI ĐOẠN 4</div>
+              <h4 class="text-lg font-black text-primary mt-2">THI THỬ & CHỮA ĐỀ</h4>
+            </div>
+
+            <div class="w-14 h-14 rounded-2xl bg-[#F7E8E5] text-primary flex items-center justify-center mx-auto mb-5 border border-[#E8C9C9] group-hover:scale-110 transition-transform">
+              <i data-lucide="monitor" class="w-7 h-7"></i>
+            </div>
+
+            <ul class="space-y-2.5 text-sm text-textMain font-medium mb-6">
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Thi thử mô phỏng 4 kỹ năng</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Phân tích kết quả & lỗi sai</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-primary shrink-0 mt-0.5"></i>
+                <span>Chiến thuật trước thi</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-3.5 rounded-2xl bg-[#F7E8E5] border border-[#E8C9C9] text-center">
+            <div class="text-[11px] font-bold uppercase tracking-wider text-primary flex items-center justify-center gap-1">
+              <i data-lucide="target" class="w-3.5 h-3.5"></i> MỤC TIÊU
+            </div>
+            <div class="text-sm font-semibold text-primary mt-1">Ổn định điểm số & Sẵn sàng cho kỳ thi</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Motto Banner -->
+      <div class="mt-12 p-5 sm:p-6 rounded-2xl bg-white border border-dashed border-[#E8C9C9] text-center flex flex-wrap items-center justify-center gap-3 reveal">
+        <i data-lucide="trophy" class="w-6 h-6 text-primary"></i>
+        <span class="text-base sm:text-lg font-black uppercase tracking-widest text-primary inline-block py-1">
+          KIÊN TRÌ – ĐÚNG PHƯƠNG PHÁP – ĐẠT MỤC TIÊU
+        </span>
+        <i data-lucide="trending-up" class="w-6 h-6 text-primary"></i>
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-10 text-center flex flex-wrap items-center justify-center gap-4 reveal">
+        <a href="roadmap-b1.html" class="px-8 py-4 text-base font-bold text-primary bg-[#F7E8E5] border border-[#E8C9C9] hover:bg-primary hover:text-white rounded-2xl transition-all inline-flex items-center gap-3 group">
+          <i data-lucide="book-open" class="w-5 h-5 text-primary"></i>
+          <span>Xem Lộ Trình VSTEP B1 Chi Tiết (20 Buổi)</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        <a href="roadmap-b2.html" class="px-8 py-4 text-base font-bold text-primaryDark bg-amber-50 border border-gold/40 hover:bg-gold hover:text-white rounded-2xl transition-all inline-flex items-center gap-3 group shadow-sm">
+          <i data-lucide="award" class="w-5 h-5 text-gold"></i>
+          <span>Xem Lộ Trình VSTEP B2 Chi Tiết (24 Buổi)</span>
+          <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ==================== EXAM STRUCTURE SECTION ==================== -->
+  <section id="structure-section" class="tab-content py-24 bg-white border-t border-gray-200 relative hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-4 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F7E8E5] border border-[#E8C9C9] text-primary text-xs font-bold uppercase tracking-wider">
+          <i data-lucide="book-open-check" class="w-4 h-4"></i>
+          <span>Cấu Trúc Định Dạng Đề Thi VSTEP</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-primary tracking-tight">
+          Chi Tiết Cấu Trúc Đề Thi & Hình Thức Thi VSTEP
+        </h2>
+        <p class="text-textMuted text-base sm:text-lg font-medium leading-relaxed">
+          Nắm rõ tổng quan 4 kỹ năng bài thi VSTEP cùng hình thức thi trên máy tính mới nhất.
+        </p>
+      </div>
+
+      <!-- 1. BẢNG TỔNG QUAN CẤU TRÚC ĐỀ THI VSTEP -->
+      <div class="mb-16 bg-white rounded-3xl border-2 border-[#E8C9C9] shadow-card overflow-hidden reveal">
+        <div class="p-6 sm:p-8 bg-gradient-to-r from-primary via-primaryDark to-primary text-white flex items-center justify-between">
+          <div class="flex items-center gap-3.5">
+            <div class="w-11 h-11 rounded-2xl bg-white/10 flex items-center justify-center border border-white/20">
+              <i data-lucide="table" class="w-6 h-6 text-gold"></i>
+            </div>
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold text-white">Bảng Tổng Quan Cấu Trúc Đề Thi VSTEP</h3>
+              <p class="text-xs text-white/80">Tóm tắt thời gian, cấu trúc và mục tiêu đánh giá 4 kỹ năng</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="overflow-x-auto p-4 sm:p-6 bg-white">
+          <table class="w-full text-left border-collapse border border-gray-200 min-w-[750px] rounded-2xl overflow-hidden shadow-sm">
+            <thead>
+              <tr class="bg-[#FAF0ED] text-primary text-xs sm:text-sm font-bold border-b border-[#E8C9C9]">
+                <th class="py-3.5 px-4 text-center border-r border-[#E8C9C9] w-1/6">Kỹ năng</th>
+                <th class="py-3.5 px-4 text-center border-r border-[#E8C9C9] w-1/6">Thời gian</th>
+                <th class="py-3.5 px-4 text-center border-r border-[#E8C9C9] w-1/4">Cấu trúc</th>
+                <th class="py-3.5 px-4 text-left">Nội dung / Mục tiêu</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-200 text-xs sm:text-sm text-textMain">
+              <!-- Listening Row (Blue Theme) -->
+              <tr class="hover:bg-blue-50/40 transition-colors">
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold text-blue-700 bg-blue-50/30">
+                  <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="headphones" class="w-4 h-4 text-blue-600 shrink-0"></i>
+                    <span>Listening</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold">
+                  <span class="inline-block px-3 py-1 rounded-lg bg-blue-100 text-blue-700 text-xs font-bold border border-blue-200 shadow-sm">40 phút</span>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-semibold text-textMain">
+                  3 phần – 35 câu hỏi
+                </td>
+                <td class="py-4 px-5 leading-relaxed">
+                  Nghe các bài độc thoại, hội thoại và bài nói học thuật ngắn; đánh giá khả năng nghe ý chính, chi tiết, suy luận và thái độ người nói.
+                </td>
+              </tr>
+
+              <!-- Reading Row (Emerald Theme) -->
+              <tr class="hover:bg-emerald-50/40 transition-colors">
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold text-emerald-700 bg-emerald-50/30">
+                  <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="book-open" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+                    <span>Reading</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold">
+                  <span class="inline-block px-3 py-1 rounded-lg bg-emerald-100 text-emerald-700 text-xs font-bold border border-emerald-200 shadow-sm">60 phút</span>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-semibold text-textMain">
+                  4 Passage – 40 câu trắc nghiệm
+                </td>
+                <td class="py-4 px-5 leading-relaxed">
+                  Đọc 4 văn bản với tổng độ dài khoảng 1.900–2.050 từ; kiểm tra kỹ năng tìm thông tin, paraphrase, inference, reference, main idea, author's purpose và vocabulary in context.
+                </td>
+              </tr>
+
+              <!-- Writing Row (Amber Theme) -->
+              <tr class="hover:bg-amber-50/40 transition-colors">
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold text-amber-800 bg-amber-50/30">
+                  <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="pen-tool" class="w-4 h-4 text-amber-600 shrink-0"></i>
+                    <span>Writing</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold">
+                  <span class="inline-block px-3 py-1 rounded-lg bg-amber-100 text-amber-800 text-xs font-bold border border-amber-200 shadow-sm">60 phút</span>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-semibold text-textMain">
+                  2 Task (Email + Essay)
+                </td>
+                <td class="py-4 px-5 leading-relaxed space-y-1.5">
+                  <div><strong class="text-amber-800 font-bold">Task 1:</strong> Viết thư/email tối thiểu 120 từ theo tình huống cho trước.</div>
+                  <div><strong class="text-amber-800 font-bold">Task 2:</strong> Viết bài luận tối thiểu 250 từ, trình bày và bảo vệ quan điểm về một vấn đề xã hội hoặc học thuật.</div>
+                </td>
+              </tr>
+
+              <!-- Speaking Row (Purple Theme) -->
+              <tr class="hover:bg-purple-50/40 transition-colors">
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold text-purple-700 bg-purple-50/30">
+                  <div class="flex items-center justify-center gap-2">
+                    <i data-lucide="message-square" class="w-4 h-4 text-purple-600 shrink-0"></i>
+                    <span>Speaking</span>
+                  </div>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-bold">
+                  <span class="inline-block px-3 py-1 rounded-lg bg-purple-100 text-purple-700 text-xs font-bold border border-purple-200 shadow-sm">12 phút</span>
+                </td>
+                <td class="py-4 px-4 text-center border-r border-gray-200 font-semibold text-textMain">
+                  3 Part
+                </td>
+                <td class="py-4 px-5 leading-relaxed space-y-1.5">
+                  <div><strong class="text-purple-700 font-bold">Part 1:</strong> Tương tác xã hội, trả lời các câu hỏi về bản thân và chủ đề quen thuộc.</div>
+                  <div><strong class="text-purple-700 font-bold">Part 2:</strong> Thảo luận tình huống, lựa chọn và bảo vệ giải pháp phù hợp.</div>
+                  <div><strong class="text-purple-700 font-bold">Part 3:</strong> Phát triển chủ đề, trình bày và mở rộng quan điểm thông qua các câu hỏi chuyên sâu hơn.</div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+      <!-- 2. CHI TIẾT 4 KỸ NĂNG -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        
+        <!-- Skill 1: Listening (Rich Soft Blue Card) -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl border-2 border-blue-200 hover:border-blue-400 transition-all bg-[#F0F6FF] shadow-card reveal">
+          <div class="flex items-center justify-between mb-5 pb-4 border-b border-blue-200/80">
+            <div class="flex items-center gap-4">
+              <div class="p-3.5 rounded-2xl bg-blue-600 text-white shadow-md">
+                <i data-lucide="headphones" class="w-7 h-7"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-blue-600 text-white text-xs font-bold flex items-center justify-center">1</span>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-blue-950">Kỹ Năng Nghe (Listening)</h3>
+                </div>
+                <span class="text-xs text-blue-700 font-semibold">35 câu hỏi trắc nghiệm</span>
+              </div>
+            </div>
+            <span class="px-3.5 py-1.5 bg-blue-600 text-white rounded-full text-xs font-extrabold shrink-0 shadow-sm">40 Phút</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-blue-950 mb-4 leading-relaxed font-medium">
+            Phần Nghe bao gồm 3 phần với tổng cộng 35 câu hỏi trắc nghiệm. Thí sinh nghe qua tai nghe cá nhân, mỗi đoạn chỉ được nghe một lần.
+          </p>
+
+          <div class="space-y-2.5 mb-5">
+            <div class="p-3.5 rounded-2xl bg-white border border-blue-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-blue-700 shrink-0">Part 1:</span>
+              <span>Nghe đoạn hội thoại ngắn – trả lời 10 câu hỏi</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-blue-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-blue-700 shrink-0">Part 2:</span>
+              <span>Nghe đoạn độc thoại – trả lời 10 câu hỏi</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-blue-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-blue-700 shrink-0">Part 3:</span>
+              <span>Nghe đoạn hội thoại dài – trả lời 15 câu hỏi</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border-2 border-blue-300 text-xs sm:text-sm text-blue-900 flex items-start gap-2.5 font-semibold shadow-sm">
+            <i data-lucide="info" class="w-4.5 h-4.5 text-blue-600 shrink-0 mt-0.5"></i>
+            <span>Các câu hỏi dưới dạng lựa chọn A, B, C, D. Thí sinh cần luyện kỹ năng bắt ý chính, chi tiết cụ thể và suy luận ngữ cảnh.</span>
+          </div>
+        </div>
+
+        <!-- Skill 2: Reading (Rich Mint Emerald Card) -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl border-2 border-emerald-200 hover:border-emerald-400 transition-all bg-[#ECFDF5] shadow-card reveal">
+          <div class="flex items-center justify-between mb-5 pb-4 border-b border-emerald-200/80">
+            <div class="flex items-center gap-4">
+              <div class="p-3.5 rounded-2xl bg-emerald-600 text-white shadow-md">
+                <i data-lucide="book-open" class="w-7 h-7"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-emerald-600 text-white text-xs font-bold flex items-center justify-center">2</span>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-emerald-950">Kỹ Năng Đọc (Reading)</h3>
+                </div>
+                <span class="text-xs text-emerald-700 font-semibold">40 câu hỏi trắc nghiệm (4 phần)</span>
+              </div>
+            </div>
+            <span class="px-3.5 py-1.5 bg-emerald-600 text-white rounded-full text-xs font-extrabold shrink-0 shadow-sm">60 Phút</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-emerald-950 mb-4 leading-relaxed font-medium">
+            Phần Đọc đánh giá khả năng đọc hiểu các văn bản học thuật, báo chí và văn bản thông tin. Đề thi gồm 4 phần, 40 câu trắc nghiệm.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-5">
+            <div class="p-3.5 rounded-2xl bg-white border border-emerald-200/80 text-xs sm:text-sm text-textMain font-medium flex items-center gap-2.5 shadow-sm">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Phân biệt thông tin đúng/sai</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-emerald-200/80 text-xs sm:text-sm text-textMain font-medium flex items-center gap-2.5 shadow-sm">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Chọn tiêu đề phù hợp cho đoạn văn</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-emerald-200/80 text-xs sm:text-sm text-textMain font-medium flex items-center gap-2.5 shadow-sm">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Điền từ vào chỗ trống (gap filling)</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-emerald-200/80 text-xs sm:text-sm text-textMain font-medium flex items-center gap-2.5 shadow-sm">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-600 shrink-0"></i>
+              <span>Hiểu ý nghĩa từ vựng trong ngữ cảnh</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border-2 border-emerald-300 text-xs sm:text-sm text-emerald-900 flex items-start gap-2.5 font-semibold shadow-sm">
+            <i data-lucide="info" class="w-4.5 h-4.5 text-emerald-600 shrink-0 mt-0.5"></i>
+            <span>Thí sinh cần làm quen với tốc độ đọc nhanh, hiểu sâu, và nắm được cấu trúc văn bản.</span>
+          </div>
+        </div>
+
+        <!-- Skill 3: Writing (Rich Warm Amber Card) -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl border-2 border-amber-200 hover:border-amber-400 transition-all bg-[#FFFBEB] shadow-card reveal">
+          <div class="flex items-center justify-between mb-5 pb-4 border-b border-amber-200/80">
+            <div class="flex items-center gap-4">
+              <div class="p-3.5 rounded-2xl bg-amber-600 text-white shadow-md">
+                <i data-lucide="pen-tool" class="w-7 h-7"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-amber-600 text-white text-xs font-bold flex items-center justify-center">3</span>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-amber-950">Kỹ Năng Viết (Writing)</h3>
+                </div>
+                <span class="text-xs text-amber-800 font-semibold">2 bài viết (2 task)</span>
+              </div>
+            </div>
+            <span class="px-3.5 py-1.5 bg-amber-600 text-white rounded-full text-xs font-extrabold shrink-0 shadow-sm">60 Phút</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-amber-950 mb-4 leading-relaxed font-medium">
+            Phần Viết gồm 2 bài viết (2 task) được thực hiện trong 60 phút. Yêu cầu kỹ năng viết học thuật, diễn đạt rõ ràng, chính xác.
+          </p>
+
+          <div class="space-y-2.5 mb-5">
+            <div class="p-3.5 rounded-2xl bg-white border border-amber-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-amber-800 shrink-0">Task 1:</span>
+              <span>Viết một văn bản ngắn (email, thư phàn nàn, thông báo...) từ 120–150 từ.</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-amber-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-amber-800 shrink-0">Task 2:</span>
+              <span>Viết bài luận trình bày quan điểm cá nhân về một chủ đề xã hội (~250 từ).</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border-2 border-amber-300 text-xs sm:text-sm text-amber-900 flex items-start gap-2.5 font-semibold shadow-sm">
+            <i data-lucide="info" class="w-4.5 h-4.5 text-amber-600 shrink-0 mt-0.5"></i>
+            <span>Bài viết được chấm theo các tiêu chí: nội dung, tổ chức ý, từ vựng, và chính xác ngữ pháp.</span>
+          </div>
+        </div>
+
+        <!-- Skill 4: Speaking (Rich Lavender Purple Card) -->
+        <div class="glass-card p-6 sm:p-8 rounded-3xl border-2 border-purple-200 hover:border-purple-400 transition-all bg-[#F5F3FF] shadow-card reveal">
+          <div class="flex items-center justify-between mb-5 pb-4 border-b border-purple-200/80">
+            <div class="flex items-center gap-4">
+              <div class="p-3.5 rounded-2xl bg-purple-600 text-white shadow-md">
+                <i data-lucide="message-square" class="w-7 h-7"></i>
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="w-6 h-6 rounded-full bg-purple-600 text-white text-xs font-bold flex items-center justify-center">4</span>
+                  <h3 class="text-lg sm:text-xl font-extrabold text-purple-950">Kỹ Năng Nói (Speaking)</h3>
+                </div>
+                <span class="text-xs text-purple-700 font-semibold">3 Phần thi (Ghi âm trên máy)</span>
+              </div>
+            </div>
+            <span class="px-3.5 py-1.5 bg-purple-600 text-white rounded-full text-xs font-extrabold shrink-0 shadow-sm">12 Phút</span>
+          </div>
+
+          <p class="text-xs sm:text-sm text-purple-950 mb-4 leading-relaxed font-medium">
+            Thí sinh thực hiện phần thi Nói trên máy tính, qua tai nghe và micro, hệ thống sẽ ghi âm toàn bộ phần thi.
+          </p>
+
+          <div class="space-y-2.5 mb-5">
+            <div class="p-3.5 rounded-2xl bg-white border border-purple-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-purple-700 shrink-0">Part 1:</span>
+              <span>Trả lời các câu hỏi ngắn về chủ đề quen thuộc như gia đình, trường học, giải trí…</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-purple-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-purple-700 shrink-0">Part 2:</span>
+              <span>Trình bày quan điểm về một vấn đề (có chuẩn bị trong 1 phút, nói trong 3 phút)</span>
+            </div>
+            <div class="p-3.5 rounded-2xl bg-white border border-purple-200/80 text-xs sm:text-sm text-textMain font-medium flex items-start gap-3 shadow-sm">
+              <span class="font-bold text-purple-700 shrink-0">Part 3:</span>
+              <span>Trả lời các câu hỏi mở rộng, yêu cầu tư duy phản biện</span>
+            </div>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-white border-2 border-purple-300 text-xs sm:text-sm text-purple-900 flex items-start gap-2.5 font-semibold shadow-sm">
+            <i data-lucide="info" class="w-4.5 h-4.5 text-purple-600 shrink-0 mt-0.5"></i>
+            <span>Phần thi đòi hỏi thí sinh phát âm rõ ràng, diễn đạt mạch lạc và sử dụng được ngôn ngữ học thuật ở mức cơ bản đến trung cấp.</span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <!-- 3. HÌNH THỨC THI VSTEP (COMPUTER-BASED) -->
+      <div class="p-8 sm:p-10 rounded-3xl bg-gradient-to-br from-[#FAF0ED] via-white to-[#FAF0ED] border border-[#E8C9C9] shadow-card reveal">
+        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 mb-6 pb-6 border-b border-[#E8C9C9]/60">
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 rounded-2xl bg-primary text-white flex items-center justify-center shadow-md shadow-primary/20 shrink-0">
+              <i data-lucide="monitor" class="w-7 h-7"></i>
+            </div>
+            <div>
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary font-bold text-xs uppercase tracking-wider mb-1">
+                <i data-lucide="sparkles" class="w-3.5 h-3.5 text-gold"></i>
+                Định Dạng Mới Nhất
+              </div>
+              <h3 class="text-xl sm:text-2xl font-black text-primary">Hình Thức Thi VSTEP Trên Máy Tính (Computer-Based)</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="space-y-4 text-textMain text-sm sm:text-base leading-relaxed">
+          <p class="font-medium text-[#830B18]">
+            Kể từ năm 2025, tất cả các đơn vị tổ chức kỳ thi VSTEP đã chuyển hoàn toàn sang hình thức thi trên máy tính (computer-based). Cả 4 kỹ năng: Nghe, Đọc, Viết và Nói đều được thực hiện trực tiếp trên phần mềm chuyên dụng cài sẵn tại phòng máy.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 pt-2">
+            <div class="p-4 rounded-2xl bg-white border border-[#E8C9C9]/80 shadow-sm flex items-start gap-3">
+              <div class="w-8 h-8 rounded-xl bg-[#F7E8E5] text-primary flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="keyboard" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-medium">Thí sinh làm bài bằng bàn phím, chuột và tai nghe có micro.</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-[#E8C9C9]/80 shadow-sm flex items-start gap-3">
+              <div class="w-8 h-8 rounded-xl bg-[#F7E8E5] text-primary flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="cpu" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-medium">Các câu trả lời được ghi nhận hoặc ghi âm tự động, không có sự can thiệp của giám khảo trong quá trình làm bài.</span>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-white border border-[#E8C9C9]/80 shadow-sm flex items-start gap-3">
+              <div class="w-8 h-8 rounded-xl bg-[#F7E8E5] text-primary flex items-center justify-center shrink-0 mt-0.5">
+                <i data-lucide="mic" class="w-4 h-4"></i>
+              </div>
+              <span class="text-xs sm:text-sm font-medium">Phần Nói được ghi âm qua phần mềm, không có phỏng vấn trực tiếp.</span>
+            </div>
+          </div>
+
+          <div class="mt-6 p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-primary to-primaryDark text-white text-xs sm:text-sm flex items-start gap-3 shadow-md">
+            <i data-lucide="lightbulb" class="w-5 h-5 text-gold shrink-0 mt-0.5"></i>
+            <p class="leading-relaxed">
+              Việc chuẩn hóa hình thức thi giúp tăng tính khách quan, đảm bảo công bằng và dễ dàng tổ chức trên diện rộng. Thí sinh nên làm quen với giao diện máy tính trước ngày thi chính thức để thao tác thuần thục hơn.
+            </p>
+          </div>
+      <!-- Bottom Back Button -->
+      <div class="mt-10 text-center">
+        <button onclick="switchTab('home')" class="px-8 py-3.5 text-sm font-bold text-white bg-primary hover:bg-primaryDark rounded-2xl transition-all inline-flex items-center gap-2.5 shadow-md hover:scale-[1.02] active:scale-[0.98] group">
+          <i data-lucide="arrow-left" class="w-4.5 h-4.5 group-hover:-translate-x-1 transition-transform"></i>
+          <span>Quay Lại Trang Chủ</span>
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==================== COURSE PACKAGES SECTION ==================== -->
+  <section id="courses-section" class="tab-content py-24 bg-background border-t border-gray-200 relative">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 space-y-3 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#F7E8E5] border border-[#E8C9C9] text-primary text-xs font-black uppercase tracking-wider">
+          <i data-lucide="book-open" class="w-4 h-4"></i>
+          <span>KHÓA HỌC</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-black text-primary leading-normal py-1">
+          THÔNG TIN LỚP VÀ LỊCH HỌC VSTEP
+        </h2>
+        <p class="text-textMuted text-base sm:text-lg font-medium">
+          Chọn khóa học bạn muốn chinh phục để xem chi tiết lịch học và các chương trình ưu đãi mới nhất.
+        </p>
+      </div>
+
+      <!-- Course Selection Boxes (Ô 1 & Ô 2) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 reveal">
+        
+        <!-- Ô 1: KHÓA HỌC CHINH PHỤC VSTEP B1 -->
+        <div id="course-tab-b1" onclick="switchCourseTab('B1')" class="w-full p-6 rounded-2xl font-bold transition-all text-left bg-white text-primary hover:bg-gray-50 border-2 border-gray-200 hover:border-primary/40 cursor-pointer flex items-center justify-between group">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#F7E8E5] flex items-center justify-center shrink-0">
+              <i data-lucide="trophy" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-textMuted mb-0.5">Khóa Học 01</div>
+              <div class="text-lg sm:text-xl font-extrabold tracking-tight">KHÓA HỌC VSTEP B1</div>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+
+        <!-- Ô 2: KHÓA HỌC CHINH PHỤC VSTEP B2 -->
+        <div id="course-tab-b2" onclick="switchCourseTab('B2')" class="w-full p-6 rounded-2xl font-bold transition-all text-left bg-white text-primary hover:bg-gray-50 border-2 border-gray-200 hover:border-primary/40 cursor-pointer flex items-center justify-between group">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 rounded-xl bg-[#F7E8E5] flex items-center justify-center shrink-0">
+              <i data-lucide="award" class="w-6 h-6 text-primary"></i>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-wider text-textMuted mb-0.5">Khóa Học 02</div>
+              <div class="text-lg sm:text-xl font-extrabold tracking-tight">KHÓA HỌC VSTEP B2</div>
+            </div>
+          </div>
+          <i data-lucide="chevron-right" class="w-6 h-6 group-hover:translate-x-1 transition-transform"></i>
+        </div>
+
+      </div>
+
+
+      <!-- CONTENT DISPLAY CONTAINER -->
+      
+      <!-- B1 DETAILS CONTENT (Hidden by default) -->
+      <div id="course-content-b1" class="space-y-8 hidden reveal">
+        
+        <!-- Main Card Header -->
+        <div class="bg-gradient-to-r from-primary to-primaryDark text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-black leading-normal py-1">THÔNG TIN LỚP VÀ LỊCH HỌC VSTEP B1</h3>
+          </div>
+          <a href="https://www.facebook.com/share/17sPFhJyEM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-gold hover:bg-[#c49237] text-white font-extrabold rounded-2xl shadow-lg transition-all text-sm shrink-0 flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            Đăng Ký Nhận Ưu Đãi
+          </a>
+        </div>
+
+        <!-- Class Info Table / Grid -->
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 sm:p-8 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-gray-200 bg-[#FAF0ED] text-primary font-black text-sm uppercase tracking-wider">
+                  <th class="py-4 px-6 rounded-l-2xl">LỚP HỌC</th>
+                  <th class="py-4 px-6">SỐ BUỔI</th>
+                  <th class="py-4 px-6">HỌC PHÍ</th>
+                  <th class="py-4 px-6 rounded-r-2xl">HÌNH THỨC</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-sm font-semibold text-textMain">
+                <tr class="hover:bg-gray-50/80 transition-colors">
+                  <td class="py-5 px-6 font-bold text-primary text-base">VSTEP B1 K01</td>
+                  <td class="py-5 px-6 font-mono font-bold text-base">20 BUỔI</td>
+                  <td class="py-5 px-6 font-mono font-bold text-base text-primary">1.800.000 VNĐ</td>
+                  <td class="py-5 px-6">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-bold text-xs">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      Online
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Promotions Cards (Ưu Đãi) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Ưu Đãi Riêng K1 -->
+          <div class="p-6 sm:p-8 bg-white rounded-3xl border-2 border-[#E8C9C9] shadow-md space-y-4 relative overflow-hidden">
+            <div class="absolute -top-3 -right-3 w-20 h-20 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+            <div class="flex items-center gap-3 text-primary font-black text-lg">
+              <div class="w-10 h-10 rounded-xl bg-[#F7E8E5] flex items-center justify-center shrink-0">
+                <i data-lucide="gift" class="w-5 h-5"></i>
+              </div>
+              <h4>ƯU ĐÃI RIÊNG DÀNH CHO LỚP K1:</h4>
+            </div>
+            
+            <div class="space-y-3 pt-2 text-sm">
+              <p class="text-textMain font-medium leading-relaxed">
+                Giảm trực tiếp <span class="font-bold text-primary">300.000 VNĐ</span> vào học phí cho tất cả các gói đăng ký.
+              </p>
+              <div class="p-4 bg-[#FAF0ED] rounded-2xl border border-[#E8C9C9] flex items-center justify-between font-mono">
+                <span class="text-gray-400 line-through text-xs sm:text-sm">Giá gốc: 1.800.000 VNĐ</span>
+                <span class="text-primary font-extrabold text-base sm:text-lg">Ưu đãi lớp K1: 1.500.000 VNĐ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ưu Đãi Nhóm -->
+          <div class="p-6 sm:p-8 bg-white rounded-3xl border border-gray-200 shadow-md space-y-4">
+            <div class="flex items-center gap-3 text-primary font-black text-lg">
+              <div class="w-10 h-10 rounded-xl bg-[#F7E8E5] flex items-center justify-center shrink-0">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <h4>ƯU ĐÃI NHÓM (CỘNG DỒN GIẢM GIÁ)</h4>
+            </div>
+            
+            <div class="space-y-3 pt-2 text-sm">
+              <div class="p-3.5 bg-gray-50 rounded-2xl border border-gray-100 flex items-center gap-3">
+                <span class="text-xl">👥</span>
+                <div>
+                  <div class="font-bold text-textMain">Đăng ký nhóm 2 người</div>
+                  <div class="text-xs text-primary font-semibold">Giảm thêm 100.000 VNĐ / học viên</div>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-gray-50 rounded-2xl border border-gray-100 flex items-center gap-3">
+                <span class="text-xl">👥</span>
+                <div>
+                  <div class="font-bold text-textMain">Đăng ký nhóm 3 người trở lên</div>
+                  <div class="text-xs text-primary font-semibold">Giảm thêm 200.000 VNĐ / học viên</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- B2 DETAILS CONTENT (Hidden by default) -->
+      <div id="course-content-b2" class="space-y-8 hidden">
+        
+        <!-- Main Card Header -->
+        <div class="bg-gradient-to-r from-primary to-primaryDark text-white p-6 sm:p-8 rounded-3xl shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 class="text-2xl sm:text-3xl font-black leading-normal py-1">THÔNG TIN LỚP VÀ LỊCH HỌC VSTEP B2</h3>
+          </div>
+          <a href="https://www.facebook.com/share/17sPFhJyEM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-gold hover:bg-[#c49237] text-white font-extrabold rounded-2xl shadow-lg transition-all text-sm shrink-0 flex items-center gap-2">
+            <i data-lucide="sparkles" class="w-4 h-4"></i>
+            Đăng Ký Nhận Ưu Đãi
+          </a>
+        </div>
+
+        <!-- Class Info Table / Grid -->
+        <div class="bg-white rounded-3xl border border-gray-200 shadow-sm p-6 sm:p-8 overflow-hidden">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="border-b border-gray-200 bg-[#FAF0ED] text-primary font-black text-sm uppercase tracking-wider">
+                  <th class="py-4 px-6 rounded-l-2xl">LỚP HỌC</th>
+                  <th class="py-4 px-6">SỐ BUỔI</th>
+                  <th class="py-4 px-6">HỌC PHÍ</th>
+                  <th class="py-4 px-6 rounded-r-2xl">HÌNH THỨC</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100 text-sm font-semibold text-textMain">
+                <tr class="hover:bg-gray-50/80 transition-colors">
+                  <td class="py-5 px-6 font-bold text-primary text-base">VSTEP B2 K01</td>
+                  <td class="py-5 px-6 font-mono font-bold text-base">24 BUỔI</td>
+                  <td class="py-5 px-6 font-mono font-bold text-base text-primary">2.100.000 VNĐ</td>
+                  <td class="py-5 px-6">
+                    <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-bold text-xs">
+                      <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                      Online
+                    </span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Promotions Cards (Ưu Đãi) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Ưu Đãi Riêng K01 -->
+          <div class="p-6 sm:p-8 bg-white rounded-3xl border-2 border-[#E8C9C9] shadow-md space-y-4 relative overflow-hidden">
+            <div class="absolute -top-3 -right-3 w-20 h-20 bg-primary/10 rounded-full blur-xl pointer-events-none"></div>
+            <div class="flex items-center gap-3 text-primary font-black text-lg">
+              <div class="w-10 h-10 rounded-xl bg-[#F7E8E5] flex items-center justify-center shrink-0">
+                <i data-lucide="gift" class="w-5 h-5"></i>
+              </div>
+              <h4>ƯU ĐÃI RIÊNG DÀNH CHO LỚP K01:</h4>
+            </div>
+            
+            <div class="space-y-3 pt-2 text-sm">
+              <p class="text-textMain font-medium leading-relaxed">
+                Giảm trực tiếp <span class="font-bold text-primary">300.000 VNĐ</span> vào học phí cho tất cả các gói đăng ký.
+              </p>
+              <div class="p-4 bg-[#FAF0ED] rounded-2xl border border-[#E8C9C9] flex items-center justify-between font-mono">
+                <span class="text-gray-400 line-through text-xs sm:text-sm">Giá gốc: 2.100.000 VNĐ</span>
+                <span class="text-primary font-extrabold text-base sm:text-lg">Ưu đãi lớp K1: 1.800.000 VNĐ</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ưu Đãi Nhóm -->
+          <div class="p-6 sm:p-8 bg-white rounded-3xl border border-gray-200 shadow-md space-y-4">
+            <div class="flex items-center gap-3 text-primary font-black text-lg">
+              <div class="w-10 h-10 rounded-xl bg-[#F7E8E5] flex items-center justify-center shrink-0">
+                <i data-lucide="users" class="w-5 h-5"></i>
+              </div>
+              <h4>ƯU ĐÃI NHÓM (CỘNG DỒN GIẢM GIÁ)</h4>
+            </div>
+            
+            <div class="space-y-3 pt-2 text-sm">
+              <div class="p-3.5 bg-gray-50 rounded-2xl border border-gray-100 flex items-center gap-3">
+                <span class="text-xl">👥</span>
+                <div>
+                  <div class="font-bold text-textMain">Đăng ký nhóm 2 người</div>
+                  <div class="text-xs text-primary font-semibold">Giảm thêm 100.000 VNĐ / học viên</div>
+                </div>
+              </div>
+
+              <div class="p-3.5 bg-gray-50 rounded-2xl border border-gray-100 flex items-center gap-3">
+                <span class="text-xl">👥</span>
+                <div>
+                  <div class="font-bold text-textMain">Đăng ký nhóm 3 người trở lên</div>
+                  <div class="text-xs text-primary font-semibold">Giảm thêm 200.000 VNĐ / học viên</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+  <!-- ==================== THÔNG TIN GIÁO VIÊN ==================== -->
+  <section id="teacher-info-section" class="teacher-section relative overflow-hidden">
+
+    <div class="decor decor-1"></div>
+    <div class="decor decor-2"></div>
+    <div class="decor decor-3"></div>
+
+    <!-- Decorative Watermark Text Top Right -->
+    <div class="hidden lg:block absolute top-8 right-12 text-right pointer-events-none opacity-80 select-none">
+      <div class="font-serif italic text-[#9c1c28]/70 text-xl font-bold tracking-wide">Better English</div>
+      <div class="font-serif italic text-[#9c1c28]/70 text-xl font-bold tracking-wide pl-6">Brighter Future <span class="text-xs">v</span></div>
+    </div>
+
+    <!-- TIÊU ĐỀ -->
+    <div class="section-title">
+      <span class="title-tag">
+        <i class="fa-solid fa-user-group"></i>
+        ĐỘI NGŨ GIÁO VIÊN
+      </span>
+
+      <h1>
+        GẶP GỠ
+        <span>GIÁO VIÊN ĐỒNG HÀNH</span>
+      </h1>
+
+      <p>
+        NHỮNG NGƯỜI GIÚP BẠN CHINH PHỤC VSTEP B1/B2
+      </p>
+
+      <div class="title-line"></div>
+    </div>
+
+    <!-- NỘI DUNG CONTAINER -->
+    <div class="teacher-container">
+
+      <!-- CỘT TRÁI -->
+      <div class="teacher-left">
+
+        <div class="teacher-image-box">
+
+          <!-- Hand-drawn Cloud Speech Bubble placed to the top-left side -->
+          <div class="teacher-cloud-bubble">
+            <svg class="cloud-bubble-svg" viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Bubble Background -->
+              <path d="M 25 80 C 15 35, 60 15, 105 15 C 160 15, 185 45, 180 90 C 175 135, 125 145, 80 145 C 40 145, 30 115, 25 80 Z" fill="#FFFFFF" fill-opacity="0.96"/>
+              
+              <!-- Bubble Outline -->
+              <path d="M 155 25 C 105 5, 45 15, 28 65 C 15 110, 55 150, 115 142 C 165 135, 195 105, 180 50 C 172 20, 120 15, 95 18" stroke="#941b26" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              <path d="M 150 28 C 100 8, 50 18, 35 60 C 20 100, 60 145, 115 138 C 160 132, 190 105, 175 55 C 168 25, 118 18, 98 20" stroke="#941b26" stroke-opacity="0.3" stroke-width="1.2" stroke-linecap="round" fill="none"/>
+              
+              <!-- Hand-drawn arrow pointing down right -->
+              <path d="M 115 135 Q 125 150, 145 155" stroke="#941b26" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              <path d="M 135 153 L 145 155 L 142 145" stroke="#941b26" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+              
+              <!-- Heart 1 (under 'mục') -->
+              <path d="M 85 120 C 82 115, 88 115, 88 120 C 88 125, 85 128, 85 128 C 85 128, 82 125, 82 120 C 82 115, 88 115, 85 120 Z" fill="#941b26"/>
+              
+              <!-- Heart 2 (under arrow) -->
+              <path d="M 130 115 C 127 110, 133 110, 133 115 C 133 120, 130 123, 130 123 C 130 123, 127 120, 127 115 C 127 110, 133 110, 130 115 Z" fill="#941b26"/>
+            </svg>
+            <div class="cloud-bubble-content">
+              <span class="line-1">Cùng bạn</span>
+              <span class="line-2">vươn tới</span>
+              <span class="line-3">mục tiêu!</span>
+            </div>
+          </div>
+
+          <!-- Soft Luxury Gradient Background Circle -->
+          <div class="image-circle"></div>
+
+          <!-- Image Wrapper (Clips the bottom dress gracefully along circle curve while head pops out top) -->
+          <div class="teacher-img-wrapper">
+            <img src="Ảnh cô Thanh.png" alt="Cô Hồng Thanh">
+          </div>
+
+          <!-- Teacher Name Pill Badge -->
+          <div class="teacher-name">
+            Ms. Thanh
+          </div>
+
+        </div>
+
+        <!-- Position Title Below Red Box -->
+        <div class="teacher-position">
+          <strong>Luyện thi Vstep B1/B2</strong>
+        </div>
+
+        <!-- THỐNG KÊ (4 BOXES) -->
+        <div class="stats">
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <strong>3+</strong>
+            <p>Năm kinh nghiệm<br>giảng dạy</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <strong>9.7/10</strong>
+            <p>Đánh giá<br>thực tập</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <strong>C1</strong>
+            <p>VSTEP</p>
+          </div>
+
+          <div class="stat-item">
+            <div class="stat-icon">
+              <i class="fa-solid fa-microscope"></i>
+            </div>
+            <strong>2024</strong>
+            <p>Nghiên cứu<br>khoa học</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CỘT PHẢI -->
+      <div class="teacher-right">
+
+        <!-- SECTION 1: HỌC VẤN & CHỨNG CHỈ -->
+        <div id="teacher-sec-education" class="content-group">
+          <h2>
+            <i class="fa-solid fa-graduation-cap"></i>
+            HỌC VẤN & CHỨNG CHỈ
+          </h2>
+
+          <div class="info-box">
+            <div class="info-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <div>
+              <h3>Cử nhân Sư phạm Tiếng Anh xếp loại Giỏi</h3>
+              <p>Trường Đại học Ngoại ngữ, Đại học Huế</p>
+            </div>
+          </div>
+
+          <div class="info-box">
+            <div class="info-icon">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <h3>
+                Chứng chỉ VSTEP C1
+                <span></span>
+              </h3>
+              <p></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 2: KINH NGHIỆM GIẢNG DẠY -->
+        <div id="teacher-sec-experience" class="content-group">
+          <h2>
+            <i class="fa-solid fa-chalkboard-user"></i>
+            KINH NGHIỆM GIẢNG DẠY
+          </h2>
+
+          <ul>
+            <li>
+              Hơn 3 năm kinh nghiệm giảng dạy với nhiều độ tuổi và hình thức khác nhau: gia sư, dạy kèm, dạy nhóm nhỏ, dạy online và offline.
+            </li>
+            <li>
+              Kiến tập - Thực tập sư phạm tại Trường THPT Nguyễn Trường Tộ, TP. Huế với kết quả 9.7/10.
+            </li>
+            <li>
+              Nhiều học sinh có sự tiến bộ, tự tin hơn và đạt kết quả cao.
+            </li>
+          </ul>
+        </div>
+
+        <!-- SECTION 3: HOẠT ĐỘNG NỔI BẬT -->
+        <div id="teacher-sec-activities" class="content-group">
+          <h2>
+            <i class="fa-solid fa-star"></i>
+            HOẠT ĐỘNG & THÀNH TÍCH NỔI BẬT
+          </h2>
+
+          <ul>
+            <li>
+              Chủ nhiệm đề tài Nghiên cứu Khoa học năm 2024.
+            </li>
+            <li>
+              Từng giữ vai trò Ủy viên BCH Hội Sinh viên Trường Đại học Ngoại ngữ, ĐH Huế.
+            </li>
+            <li>
+              Từng là Chủ nhiệm CLB Guitar và đạt nhiều thành tích trong công tác Đoàn - Hội. Trong đó có các danh hiệu cấp Trường, cấp Đại học Huế và cấp Thành phố.
+            </li>
+          </ul>
+        </div>
+
+        <!-- FOOTER CARD / CONTACT AREA -->
+        <div class="contact-area">
+          <button class="consult-btn" onclick="openConsultationModal('Tư vấn trực tiếp với Cô Hồng Thanh')">
+            <i class="fa-regular fa-paper-plane"></i>
+            Nhận Tư Vấn Trực Tiếp
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+          <div class="contact-info">
+            <div>
+              <i class="fa-brands fa-facebook text-[#1877F2]"></i>
+              <span>
+                Facebook: <a href="https://www.facebook.com/share/17sPFhJyEM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><strong>Target VSTEP English</strong></a>
+              </span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-phone"></i>
+              <span>
+                Zalo: <strong>0988633249</strong>
+              </span>
+            </div>
+
+            <div>
+              <i class="fa-solid fa-envelope"></i>
+              <span>
+                Email: <strong>hongthanh17304@gmail.com</strong>
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-background border-t border-gray-200 pt-16 pb-12 text-textMuted text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+        
+        <!-- Col 1: Brand & Bio -->
+        <div class="lg:col-span-2 space-y-4">
+          <a href="#" class="flex items-center gap-3">
+            <img src="logo khong nen.png" alt="TARGET VSTEP English" class="w-10 h-10 object-contain">
+            <span class="text-xl font-bold text-primary tracking-tight">TARGET B1/B2</span>
+          </a>
+          <p class="text-xs text-textMuted leading-relaxed max-w-sm">
+            Lộ trình học tập tinh gọn, dễ hiểu, được tổng hợp dựa trên cấu trúc đề thi VSTEP. Giúp bạn củng cố lại kiến thức nền tảng, và từng bước cải thiện kỹ năng để hướng tới TARGET B1/B2.
+          </p>
+          <div class="text-xs text-textMuted space-y-2 pt-2">
+            <div class="flex items-center gap-2">
+              <i data-lucide="phone" class="w-4 h-4 text-primary shrink-0"></i>
+              <span>Zalo: <a href="https://zalo.me/0988633249" target="_blank" class="hover:text-primary transition-colors font-bold text-textMain font-medium">0988633249</a></span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-primary shrink-0"></i>
+              <span>Gmail: <a href="mailto:hongthanhle7304@gmail.com" class="hover:text-primary transition-colors font-bold text-textMain font-medium">hongthanhle7304@gmail.com</a></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+    </div>
+  </footer>
+
+  <!-- ==================== FLOATING CHAT / MESSENGER WIDGET ==================== -->
+  <div class="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2.5 pointer-events-auto">
+    <div class="flex flex-col items-center gap-2.5">
+      <!-- Zalo Chat Button -->
+      <a href="https://zalo.me/0988633249" target="_blank" rel="noopener noreferrer" 
+         class="w-10 h-10 rounded-full bg-[#0068FF] text-white flex items-center justify-center shadow-md hover:scale-110 active:scale-95 transition-all duration-300 relative group/zalo"
+         title="Chat qua Zalo: 0988633249">
+        <span class="text-[10px] font-black tracking-tighter">Zalo</span>
+        <span class="absolute right-12 bg-slate-900 text-white text-[11px] font-bold px-2.5 py-1 rounded-lg whitespace-nowrap opacity-0 group-hover/zalo:opacity-100 transition-opacity duration-200 pointer-events-none shadow-md">
+          Zalo: 0988633249
+        </span>
+      </a>
+
+      <!-- Facebook Messenger Button -->
+      <a href="https://www.facebook.com/share/17sPFhJyEM/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" 
+         class="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-gradient-to-tr from-[#0084FF] via-[#00C6FF] to-[#0084FF] text-white flex items-center justify-center shadow-lg shadow-blue-500/25 hover:scale-110 active:scale-95 transition-all duration-300 relative group/fb"
+         title="Chat phản hồi qua Facebook Page">
+        <span class="absolute inset-0 rounded-full bg-[#0084FF] opacity-35 animate-ping"></span>
+        <svg class="w-5 h-5 sm:w-6 sm:h-6 fill-current text-white relative z-10" viewBox="0 0 24 24">
+          <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.516 3.734 7.218V22l3.364-1.848c.925.257 1.905.397 2.902.397 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.092 12.378l-2.55-2.723-4.977 2.723 5.474-5.811 2.607 2.723 4.92-2.723-5.474 5.811z"/>
+        </svg>
+        <span class="absolute right-14 sm:right-15 bg-slate-900 text-white text-xs font-bold px-3 py-1.5 rounded-lg whitespace-nowrap opacity-0 group-hover/fb:opacity-100 transition-opacity duration-200 pointer-events-none shadow-lg flex items-center gap-1.5">
+          <i class="fa-brands fa-facebook text-blue-400 text-xs"></i>
+          Chat với TARGET VSTEP English
+        </span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Main Application JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>
