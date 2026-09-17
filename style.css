@@ -1047,3 +1047,40 @@ ul, ol {
     }
 }
 
+/* ============================================
+   MOBILE PERFORMANCE OPTIMIZATION
+   Tắt các hiệu ứng nặng trên điện thoại
+   để nội dung xuất hiện nhanh nhất có thể
+   ============================================ */
+@media (max-width: 768px) {
+  /* Tắt backdrop-filter blur (rất nặng trên mobile) */
+  *,
+  *::before,
+  *::after {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* Tắt các blur glow nền lớn */
+  .absolute[class*="blur-"] {
+    display: none !important;
+  }
+
+  /* Giảm shadow nặng */
+  .glass-card {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08) !important;
+  }
+
+  /* Tắt will-change để giảm memory GPU */
+  * {
+    will-change: auto !important;
+  }
+
+  /* Tắt hover transform animations trên mobile (không cần) */
+  .glass-card:hover,
+  .hover-lift:hover,
+  .stage-card:hover,
+  .feature-card:hover {
+    transform: none !important;
+  }
+}
