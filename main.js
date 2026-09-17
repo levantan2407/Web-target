@@ -35,9 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // 6. Check URL hash for section switching
-  if (window.location.hash === '#teacher-info-section' || window.location.hash === '#teacher') {
-    setTimeout(() => switchTab('teacher'), 100);
+  function handleUrlHash() {
+    const hash = window.location.hash;
+    if (hash === '#teacher-info-section' || hash === '#teacher') {
+      setTimeout(() => switchTab('teacher'), 100);
+      setTimeout(() => switchTab('teacher'), 400);
+    } else if (hash === '#courses-section' || hash === '#courses') {
+      setTimeout(() => switchTab('courses'), 100);
+      setTimeout(() => switchTab('courses'), 400);
+    } else if (hash === '#roadmap-section' || hash === '#roadmap') {
+      setTimeout(() => switchTab('roadmap'), 100);
+      setTimeout(() => switchTab('roadmap'), 400);
+    } else if (hash === '#hero-section' || hash === '#home') {
+      setTimeout(() => switchTab('home'), 100);
+    }
   }
+
+  handleUrlHash();
+  window.addEventListener('hashchange', handleUrlHash);
 });
 
 /* ==================== PARTICLES.JS INIT ==================== */
